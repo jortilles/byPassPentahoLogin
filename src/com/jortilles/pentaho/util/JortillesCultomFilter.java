@@ -20,7 +20,7 @@ public class JortillesCultomFilter implements Filter {
     	
 
     	//Codificaccion del token
-    	String date = new SimpleDateFormat("dd--MM--yyyy").format(new Date());
+    	String date = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
     	String dst = (String) request.getParameter("dst");
     	String mi_token = (String) request.getParameter("token");
     	String password = date + "SomeExtraText" + dst;
