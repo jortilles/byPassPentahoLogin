@@ -19,7 +19,7 @@ This properties file looks like this:
 ```
 
 This properties file have:
--The user credentials wich we will use to bypass the login. It is recomended NOT to use the admin user for this.
+-The user credentials we will use to bypass the login. It is recommended  NOT to use the admin user for this.
 -The route of all the destinations available... you can add as much as you want.
 
 
@@ -44,7 +44,7 @@ And the filter mapping also before Spring Security Filter Chain Proxy ...
 	</filter-mapping>
 ```
 
-Finally add the servelt jast at the end of the servlet declarations.
+Add the servelt just at the end of the servlet declarations.
 ```
   <!-- insert additional servlets -->
   <servlet>
@@ -59,8 +59,8 @@ Finally add the servelt jast at the end of the servlet declarations.
 ```
 
 
-###Finally...if you are using pentaho 5.3 or avove you sould enable the option to accept user and password form the ur.
-in /pentaho-solutions/system/security.properties you should set to true the parameter requestParameterAuthenticationEnabled
+###Finally...
+if you are using pentaho 5.3 or above you should  enable the option to accept user and password form the url. in /pentaho-solutions/system/security.properties you should set to true the parameter requestParameterAuthenticationEnabled
 
 ```
   requestParameterAuthenticationEnabled=true
@@ -80,13 +80,16 @@ http://localhost:8080/pentaho/Urbano?token=e5aec18e86712a2a00061051bbbb8e62&dst=
 
 Where: 
  The destination_1 is the destination you declared in the destinos.properties file.
+ 
  The token is the hash md5 of the string: date + "SomeExtraText" + destination   where:
     the date is the date with the format yyy-mm-dd
-    "SomeExtraText" is just some extra text to make the hash ugliest. You can modify the class JortillesCultomFilter and place here you desidered text
+
+    "SomeExtraText" is just some extra text to make the hash ugliest. You can modify the class JortillesCultomFilter and place here you desired  text
+
     destination is the destination you want to go... in this example destination_1
     
 
-The filter will decode de call and attach the user and password defined in the properties file to de call. Aswell all the rest of the parameters.
+The filter will decode de call and attach the user and password defined in the properties file to de call. As well all the rest of the parameters.
 
 So... now you only have to codify your hash in the same way in the third party tool.  Yo have to generate the call with the same logic.
 
