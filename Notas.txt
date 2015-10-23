@@ -1,0 +1,42 @@
+
+el destinos.properties debe ir dentro de la carpeta web-inf/classes directamente.
+
+Todo el paquete va dentro de la carpeta web-inf/classes
+
+
+
+Extracto del web.xml 
+
+
+
+  	<filter>
+		<filter-name>JortillesCultomFilter</filter-name>
+		<filter-class>com.jortilles.pentaho.util.JortillesCultomFilter</filter-class>
+	</filter>
+  
+  	<filter-mapping>
+	   <filter-name>JortillesCultomFilter</filter-name>
+	   <url-pattern>/Urbano</url-pattern>
+	</filter-mapping>
+  
+  
+  
+  
+  <!-- insert additional servlets -->
+
+    <servlet>
+    <servlet-name>Urbano</servlet-name>
+    <servlet-class>com.jortilles.pentaho.util.Urbano</servlet-class>
+  </servlet>
+  
+  
+  
+  
+   <servlet-mapping>
+    <servlet-name>Urbano</servlet-name>
+    <url-pattern>/Urbano</url-pattern>
+  </servlet-mapping>
+
+  
+  
+  
