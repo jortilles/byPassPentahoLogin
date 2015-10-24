@@ -76,13 +76,15 @@ Take a look at:
 
 ###Now you are able to bypass the login by calling:
 
-http://localhost:8080/pentaho/Urbano?token=e5aec18e86712a2a00061051bbbb8e62&dst=destination_1
+
+  http://localhost:8080/pentaho/Urbano?token=e99b5cdc07594f1e7bed336bbaf2e2db&dst=destination_1
+
 
 Where: 
  The destination_1 is the destination you declared in the destinos.properties file.
  
  The token is the hash md5 of the string: date + "SomeExtraText" + destination   where:
-    the date is the date with the format yyy-mm-dd
+    the date is the date with the format yyyy-mm-dd
 
     "SomeExtraText" is just some extra text to make the hash ugliest. You can modify the class JortillesCultomFilter and place here you desired  text
 

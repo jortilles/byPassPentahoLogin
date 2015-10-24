@@ -42,8 +42,10 @@ public class InyectaUsuario extends HttpServletRequestWrapper
     	additionalParams.put("userid", new String[] { prop.getProperty("userid") });
     	additionalParams.put("password", new String[] {prop.getProperty("password") });
         modifiableParameters.putAll(additionalParams);
-    	System.out.println("uyc inyectados, usu: " +  prop.getProperty("userid")  );
-    	
+    	//System.out.println("uyc inyectados, usu: " +  prop.getProperty("userid")  );
+              
+        
+        
     }
 
 	@Override

@@ -23,7 +23,7 @@ public class JortillesCultomFilter implements Filter {
     	String date = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
     	String dst = (String) request.getParameter("dst");
     	String mi_token = (String) request.getParameter("token");
-    	String password = date + "SomeExtraText" + dst;
+    	String password = date +  "SomeExtraText" + dst;
     	System.out.println("llamada con token: " + mi_token +  " para el destino: " + dst );
     	
         MessageDigest md;
@@ -46,8 +46,6 @@ public class JortillesCultomFilter implements Filter {
 		
 		// Si el token que me pasan es igual al que genero
     	if ( mi_token.equals( sb.toString()  ) ){
-    		
-    		
     		chain.doFilter(new InyectaUsuario(request), response);
     	}else{
     		chain.doFilter(request, response);
