@@ -84,7 +84,7 @@ Where:
  The destination_1 is the destination you declared in the destinos.properties file.
  
  The token is the hash md5 of the string: date + "SomeExtraText" + destination   where:
-    the date is the date with the format yyyy-mm-dd
+    the date is the date with the format dd-MM-yyyy
 
     "SomeExtraText" is just some extra text to make the hash ugliest. You can modify the class JortillesCultomFilter and place here you desired  text
 
