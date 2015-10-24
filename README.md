@@ -83,12 +83,10 @@ Take a look at:
 Where: 
  The destination_1 is the destination you declared in the destinos.properties file.
  
- The token is the hash md5 of the string: date + "SomeExtraText" + destination   where:
-    the date is the date with the format dd-MM-yyyy
-
-    "SomeExtraText" is just some extra text to make the hash ugliest. You can modify the class JortillesCultomFilter and place here you desired  text
-
-    destination is the destination you want to go... in this example destination_1
+ The token is the * md5 hash*   of the string:   ** date + "SomeExtraText" + destination  **  where:
+* the date is the date with the format dd-MM-yyyy
+*"SomeExtraText" is just some extra text to make the hash ugliest. You can modify the class JortillesCultomFilter and place here you desired  text
+* destination is the destination you want to go... in this example destination_1
     
 
 The filter will decode de call and attach the user and password defined in the properties file to de call. As well all the rest of the parameters.
