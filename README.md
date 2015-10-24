@@ -89,9 +89,10 @@ Where:
 * Destination is the destination you want to go... in this example destination_1
     
 
-The filter will decode de call and attach the user and password defined in the properties file to de call. As well all the rest of the parameters.
+The filter will decode the call and attach the user and password defined in the properties file to the redirection call. As well all the rest of the parameters.
 
-So... now you only have to codify your hash in the same way in the third party tool.  Yo have to generate the call with the same logic.
+So... now you only have to codify your hash in the same way in the third party tool.  And make your call to:
 
+**http://localhost:8080/pentaho/Urbano?token=e99b5cdc07594f1e7bed336bbaf2e2db&dst=destination_1**
 
 
